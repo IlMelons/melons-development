@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melons Development</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"/>
-</head>
-<body>
-    <div class="container">
-        <h1 class="glow">Melons Development</h1>
-        <img src="logo.png" alt="Logo" class="logo">
-        <div class="links">
-            <a href="https://github.com/IlMelons" class="neon-button" id="github"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://melons-development.gitbook.io/melons-development" class="neon-button" id="docs"><i class="fas fa-book"></i> Docs</a>
-            <a href="https://discord.com/invite/RxpNTx2YKZ" class="neon-button" id="discord"><i class="fab fa-discord"></i> Discord</a>
-            <a href="https://www.youtube.com/@IlMelons" class="neon-button" id="youtube"><i class="fab fa-youtube"></i> YouTube</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Melons Development</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"/>
+    </head>
+    <body>
+        <div class="hero">
+        <div class="background-blur"></div>
+            <div class="logo-container">
+                <h1 class="glow">Melons Development</h1>
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
         </div>
-    </div>
-</body>
+
+        <div class="content">
+            <div class="links">
+                <a href="https://github.com/IlMelons" class="neon-button"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://melons-development.gitbook.io/melons-development" class="neon-button"><i class="fas fa-book"></i> Docs</a>
+                <a href="https://discord.com/invite/RxpNTx2YKZ" class="neon-button"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://www.youtube.com/@IlMelons" class="neon-button"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("scroll", function () {
+                let logo = document.querySelector(".logo-container");
+                let scrollValue = window.scrollY;
+                logo.style.transform = `translate(0, calc(-50% + ${scrollValue * 0.5}px))`;
+            });
+        </script>
+    </body>
 </html>
